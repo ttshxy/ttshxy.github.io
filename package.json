@@ -1,0 +1,13 @@
+{
+  "name": "hxy-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ttshxy/hxy-website.git",
+  "author": "胡潇遥 <tts_hxy@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  }
+}
