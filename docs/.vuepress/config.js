@@ -1,8 +1,14 @@
 module.exports = {
+  base: '/',
+  title: '胡潇遥的个人网站',
+  description: '胡潇遥的个人网站,个人网，个人博客',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
+      {
+        text: '每日一题',
+        link: '/questions/',
+      },
       { text: 'External', link: 'https://google.com' },
       {
         text: 'Languages',
@@ -34,5 +40,8 @@ module.exports = {
         ],
       },
     ],
+    sidebar: {
+      '/questions/': ['', 'js', 'css'],
+    },
   },
 };
