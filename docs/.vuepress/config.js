@@ -4,10 +4,10 @@ module.exports = {
   description: '胡潇遥的个人网站,个人网，个人博客',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '首页', link: '/' },
       {
-        text: '每日一题',
-        link: '/questions/',
+        text: '基础知识',
+        link: '/base/',
       },
       { text: 'External', link: 'https://google.com' },
       {
@@ -41,7 +41,20 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/questions/': ['', 'js', 'css'],
+      '/base/': [
+        ['', '目录'],
+        {
+          name: 'code',
+          collabsable: true,
+          title: 'js基础',
+          children: [
+            ['code/', '目录'],
+            ['code/debounce', '什么是防抖，应用场景有哪些⭐️'],
+            ['code/throttle', '什么是节流，应用场景有哪些⭐️'],
+          ],
+        },
+        'css',
+      ],
     },
   },
 };
