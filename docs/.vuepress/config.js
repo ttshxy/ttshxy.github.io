@@ -9,7 +9,7 @@ module.exports = {
         text: '基础知识',
         link: '/base/',
       },
-      { text: 'External', link: 'https://google.com' },
+      { text: 'leetcode', link: '/leetcode/' },
       {
         text: 'Languages',
         ariaLabel: 'Language Menu',
@@ -51,9 +51,22 @@ module.exports = {
             ['code/', '目录'],
             ['code/debounce', '什么是防抖，应用场景有哪些⭐️'],
             ['code/throttle', '什么是节流，应用场景有哪些⭐️'],
+            ['code/01', 'js中为何 0.1+0.2 不等于 0.3，应如何做相等比较'],
           ],
         },
-        'css',
+        {
+          name: 'css',
+          collabsable: true,
+          title: 'css基础',
+          children: [
+            ['css/', '目录'],
+            ['css/01', 'z-index: 999 元素一定会置于 z-index: 0 元素之上吗'],
+          ],
+        },
+      ],
+      '/leetcode/': [
+        ['', '目录'],
+        ['offer30', '剑指 Offer 30. 包含min函数的栈'],
       ],
     },
   },
