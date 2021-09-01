@@ -1,4 +1,5 @@
 module.exports = {
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
   base: '/',
   title: '胡潇遥的个人网站',
   description: '胡潇遥的个人网站,个人网，个人博客',
@@ -66,7 +67,17 @@ module.exports = {
       ],
       '/leetcode/': [
         ['', '目录'],
-        ['offer30', '剑指 Offer 30. 包含min函数的栈'],
+
+        {
+          name: '箭指offer',
+          collabsable: true,
+          title: '箭指offer',
+          children: [
+            ['offer30', '剑指 Offer 30. 包含min函数的栈'],
+            ['offer06', '剑指 Offer 06. 从尾到头打印链表'],
+            ['offer24', '剑指 Offer 24. 反转链表'],
+          ],
+        },
       ],
     },
   },

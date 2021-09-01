@@ -3,8 +3,8 @@ home: true
 heroImage: /logo.png
 heroText: 欢迎光临胡潇遥的个人网站
 tagline: 一起学习，每天进步一点点！
-actionText: 快速上手 →
-actionLink: /zh/guide/
+actionText: 浏览文章 →
+actionLink: /base/
 features:
 - title: Web前端开发
   details: Web前端开发，主要技术栈为React+Typescript+Antd
