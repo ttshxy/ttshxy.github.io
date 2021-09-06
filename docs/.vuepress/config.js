@@ -10,6 +10,7 @@ module.exports = {
         text: '基础知识',
         link: '/base/',
       },
+      { text: '数据接口与算法', link: '/algorithms/' },
       { text: 'leetcode', link: '/leetcode/' },
       {
         text: 'Languages',
@@ -19,27 +20,27 @@ module.exports = {
           { text: 'Japanese', link: '/language/japanese/' },
         ],
       },
-      {
-        text: 'test2',
-        ariaLabel: 'Language Menu',
-        items: [
-          {
-            text: 'Group1',
-            items: [
-              { text: 'Japanese', link: '/language/japanese/' },
-              { text: 'Japanese', link: '/language/japanese/' },
-            ],
-          },
-          {
-            text: 'Group2',
-            items: [
-              { text: 'Japanese', link: '/language/japanese/' },
-              { text: 'Japanese', link: '/language/japanese/' },
-            ],
-          },
-          { text: 'Japanese', link: '/language/japanese/' },
-        ],
-      },
+      // {
+      //   text: 'test2',
+      //   ariaLabel: 'Language Menu',
+      //   items: [
+      //     {
+      //       text: 'Group1',
+      //       items: [
+      //         { text: 'Japanese', link: '/language/japanese/' },
+      //         { text: 'Japanese', link: '/language/japanese/' },
+      //       ],
+      //     },
+      //     {
+      //       text: 'Group2',
+      //       items: [
+      //         { text: 'Japanese', link: '/language/japanese/' },
+      //         { text: 'Japanese', link: '/language/japanese/' },
+      //       ],
+      //     },
+      //     { text: 'Japanese', link: '/language/japanese/' },
+      //   ],
+      // },
     ],
     sidebar: {
       '/base/': [
@@ -67,17 +68,25 @@ module.exports = {
       ],
       '/leetcode/': [
         ['', '目录'],
-
         {
           name: '箭指offer',
           collabsable: true,
           title: '箭指offer',
           children: [
+            ['offer09', '剑指 Offer 09. 用两个栈实现队列'],
             ['offer30', '剑指 Offer 30. 包含min函数的栈'],
             ['offer06', '剑指 Offer 06. 从尾到头打印链表'],
             ['offer24', '剑指 Offer 24. 反转链表'],
+            ['offer35', '剑指 Offer 35. 复杂链表的复制'],
+            ['offer06', '剑指 Offer 04. 二维数组中的查找'],
+            ['offer11', '剑指 Offer 11. 旋转数组的最小数字'],
+            ['offer50', '剑指 Offer 50. 第一个只出现一次的字符'],
           ],
         },
+      ],
+      '/algorithms/': [
+        ['', '目录'],
+        ['binarySearch', '二分查找'],
       ],
     },
   },
