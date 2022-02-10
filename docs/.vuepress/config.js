@@ -6,20 +6,25 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: 'React', link: '/react/' },
       {
         text: '基础知识',
         link: '/base/',
       },
-      { text: '数据接口与算法', link: '/algorithms/' },
+      { text: '数据结构与算法', link: '/algorithms/' },
       { text: 'leetcode', link: '/leetcode/' },
       {
-        text: 'Languages',
-        ariaLabel: 'Language Menu',
-        items: [
-          { text: 'Chinese', link: '/language/chinese/' },
-          { text: 'Japanese', link: '/language/japanese/' },
-        ],
+        text: 'Github',
+        link: 'https://github.com/ttshxy/ttshxy.github.io/tree/master',
       },
+      // {
+      //   text: 'Languages',
+      //   ariaLabel: 'Language Menu',
+      //   items: [
+      //     { text: 'Chinese', link: '/language/chinese/' },
+      //     { text: 'Japanese', link: '/language/japanese/' },
+      //   ],
+      // },
       // {
       //   text: 'test2',
       //   ariaLabel: 'Language Menu',
@@ -43,6 +48,11 @@ module.exports = {
       // },
     ],
     sidebar: {
+      '/react/': [
+        ['', '目录'],
+        ['$$typeof.md', 'React 中 $$typeof 的作用'],
+        ['key.md', 'React key的作用以及使用方式'],
+      ],
       '/base/': [
         ['', '目录'],
         {
