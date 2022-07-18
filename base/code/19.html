@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件捕获与冒泡 | 胡潇遥的个人网站</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="胡潇遥的个人网站,个人网，个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.d8260f3c.css" as="style"><link rel="preload" href="/assets/js/app.f82c207c.js" as="script"><link rel="preload" href="/assets/js/2.93809ff7.js" as="script"><link rel="preload" href="/assets/js/29.3a991ca2.js" as="script"><link rel="prefetch" href="/assets/js/10.2ca38eee.js"><link rel="prefetch" href="/assets/js/11.42f1c0ae.js"><link rel="prefetch" href="/assets/js/12.aabcaa60.js"><link rel="prefetch" href="/assets/js/13.8af2824f.js"><link rel="prefetch" href="/assets/js/14.8de75e84.js"><link rel="prefetch" href="/assets/js/15.a3f15e54.js"><link rel="prefetch" href="/assets/js/16.20e26a4a.js"><link rel="prefetch" href="/assets/js/17.82f0950c.js"><link rel="prefetch" href="/assets/js/18.39c08676.js"><link rel="prefetch" href="/assets/js/19.40a3feae.js"><link rel="prefetch" href="/assets/js/20.8bda7505.js"><link rel="prefetch" href="/assets/js/21.cfa8e473.js"><link rel="prefetch" href="/assets/js/22.419fa50e.js"><link rel="prefetch" href="/assets/js/23.d763208f.js"><link rel="prefetch" href="/assets/js/24.b19c4467.js"><link rel="prefetch" href="/assets/js/25.9ce11f5a.js"><link rel="prefetch" href="/assets/js/26.03b68692.js"><link rel="prefetch" href="/assets/js/27.61e6099d.js"><link rel="prefetch" href="/assets/js/28.f8750c87.js"><link rel="prefetch" href="/assets/js/3.10eb3ae8.js"><link rel="prefetch" href="/assets/js/30.e627eaa8.js"><link rel="prefetch" href="/assets/js/31.82fffbbc.js"><link rel="prefetch" href="/assets/js/32.b59d26e7.js"><link rel="prefetch" href="/assets/js/33.a17e6204.js"><link rel="prefetch" href="/assets/js/34.a099926b.js"><link rel="prefetch" href="/assets/js/35.37751d3c.js"><link rel="prefetch" href="/assets/js/36.0ea830d9.js"><link rel="prefetch" href="/assets/js/37.9b8a8530.js"><link rel="prefetch" href="/assets/js/38.be2cf320.js"><link rel="prefetch" href="/assets/js/39.5db3fc34.js"><link rel="prefetch" href="/assets/js/4.f075b801.js"><link rel="prefetch" href="/assets/js/40.5a7073c8.js"><link rel="prefetch" href="/assets/js/41.95aa7683.js"><link rel="prefetch" href="/assets/js/42.2c70dff7.js"><link rel="prefetch" href="/assets/js/43.e0883ce5.js"><link rel="prefetch" href="/assets/js/44.72b32ed7.js"><link rel="prefetch" href="/assets/js/45.2e47e278.js"><link rel="prefetch" href="/assets/js/46.dc5af92a.js"><link rel="prefetch" href="/assets/js/47.e9dac652.js"><link rel="prefetch" href="/assets/js/48.d94badd3.js"><link rel="prefetch" href="/assets/js/49.a7b9f63b.js"><link rel="prefetch" href="/assets/js/5.fbedec26.js"><link rel="prefetch" href="/assets/js/50.060be50c.js"><link rel="prefetch" href="/assets/js/51.679c39bb.js"><link rel="prefetch" href="/assets/js/52.fe632d3d.js"><link rel="prefetch" href="/assets/js/53.b2042fe5.js"><link rel="prefetch" href="/assets/js/54.e9b483f0.js"><link rel="prefetch" href="/assets/js/55.bc5748de.js"><link rel="prefetch" href="/assets/js/56.f29da935.js"><link rel="prefetch" href="/assets/js/57.c4e54788.js"><link rel="prefetch" href="/assets/js/58.f1f7fc6a.js"><link rel="prefetch" href="/assets/js/59.84bfba19.js"><link rel="prefetch" href="/assets/js/6.da9cdfec.js"><link rel="prefetch" href="/assets/js/60.60576c82.js"><link rel="prefetch" href="/assets/js/7.cbe85e67.js"><link rel="prefetch" href="/assets/js/8.8d303f92.js"><link rel="prefetch" href="/assets/js/9.878d7d8d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d8260f3c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">胡潇遥的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/base/" class="nav-link router-link-active">
+  基础知识
+</a></div><div class="nav-item"><a href="/algorithms/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  leetcode
+</a></div><div class="nav-item"><a href="https://github.com/ttshxy/ttshxy.github.io/tree/master" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/base/" class="nav-link router-link-active">
+  基础知识
+</a></div><div class="nav-item"><a href="/algorithms/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  leetcode
+</a></div><div class="nav-item"><a href="https://github.com/ttshxy/ttshxy.github.io/tree/master" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/base/" aria-current="page" class="sidebar-link">目录</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/base/code/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/base/code/debounce.html" class="sidebar-link">什么是防抖，应用场景有哪些⭐️</a></li><li><a href="/base/code/throttle.html" class="sidebar-link">什么是节流，应用场景有哪些⭐️</a></li><li><a href="/base/code/01.html" class="sidebar-link">js中为何 0.1+0.2 不等于 0.3，应如何做相等比较</a></li><li><a href="/base/code/02.html" class="sidebar-link">Ajax/Fetch/axios三者有什么区别</a></li><li><a href="/base/code/03.html" class="sidebar-link">TCP 三次握手与四次挥手</a></li><li><a href="/base/code/04.html" class="sidebar-link">for...in与for...of的区别</a></li><li><a href="/base/code/05.html" class="sidebar-link">js严格模式的特点</a></li><li><a href="/base/code/06.html" class="sidebar-link">js跨域</a></li><li><a href="/base/code/07.html" class="sidebar-link">Antd Form.Item控件嵌套</a></li><li><a href="/base/code/08.html" class="sidebar-link">js事件循环体系</a></li><li><a href="/base/code/09.html" class="sidebar-link">for与forEach哪个快</a></li><li><a href="/base/code/10.html" class="sidebar-link">js作用域与闭包</a></li><li><a href="/base/code/11.html" class="sidebar-link">js中的this</a></li><li><a href="/base/code/12.html" class="sidebar-link">js中的原型与原型链</a></li><li><a href="/base/code/13.html" class="sidebar-link">NodeJs commonJs与ES6 import区别</a></li><li><a href="/base/code/14.html" class="sidebar-link">js深拷贝与浅拷贝</a></li><li><a href="/base/code/15.html" class="sidebar-link">requestAnimationFrame使用</a></li><li><a href="/base/code/16.html" class="sidebar-link">js数组去重</a></li><li><a href="/base/code/17.html" class="sidebar-link">手写js拍平函数flat</a></li><li><a href="/base/code/18.html" class="sidebar-link">url参数匹配</a></li><li><a href="/base/code/19.html" aria-current="page" class="active sidebar-link">事件捕获与冒泡</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/base/code/19.html#_1-事件冒泡与事件捕获" class="sidebar-link">1. 事件冒泡与事件捕获</a></li><li class="sidebar-sub-header"><a href="/base/code/19.html#_2-addeventlistener-的第三个参数" class="sidebar-link">2. addEventListener 的第三个参数</a></li><li class="sidebar-sub-header"><a href="/base/code/19.html#_3-事件代理" class="sidebar-link">3. 事件代理</a></li></ul></li><li><a href="/base/code/20.html" class="sidebar-link">Retina 屏 1px 像素问题</a></li><li><a href="/base/code/21.html" class="sidebar-link">前端安全-XSS和CSRF</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>杂项</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="事件捕获与冒泡"><a href="#事件捕获与冒泡" class="header-anchor">#</a> 事件捕获与冒泡</h3> <h2 id="_1-事件冒泡与事件捕获"><a href="#_1-事件冒泡与事件捕获" class="header-anchor">#</a> 1. 事件冒泡与事件捕获</h2> <p>事件冒泡和事件捕获分别由微软和网景公司提出，这两个概念都是为了解决页面中<strong>事件流</strong>（事件发生顺序）的问题。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;outer&quot;&gt;
+    &lt;p id=&quot;inner&quot;&gt;Click me!&lt;/p&gt;
+&lt;/div&gt;复制代码
+</code></pre></div><p>上面的代码当中一个div元素当中有一个p子元素，如果两个元素都有一个click的处理函数，那么我们怎么才能知道哪一个函数会首先被触发呢？</p> <p>为了解决这个问题微软和网景提出了两种几乎完全相反的概念。</p> <h3 id="事件冒泡"><a href="#事件冒泡" class="header-anchor">#</a> 事件冒泡</h3> <p>微软提出了名为<strong>事件冒泡</strong>(event bubbling)的事件流。事件冒泡可以形象地比喻为把一颗石头投入水中，泡泡会一直从水底冒出水面。也就是说，事件会从最内层的元素开始发生，一直向上传播，直到document对象。</p> <p>因此上面的例子在事件冒泡的概念下发生click事件的顺序应该是</p> <p><strong>p -&gt; div -&gt; body -&gt; html -&gt; document</strong></p> <h3 id="事件捕获"><a href="#事件捕获" class="header-anchor">#</a> 事件捕获</h3> <p>网景提出另一种事件流名为<strong>事件捕获</strong>(event capturing)。与事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。</p> <p>上面的例子在事件捕获的概念下发生click事件的顺序应该是</p> <p><strong>document -&gt; html -&gt; body -&gt; div -&gt; p</strong></p> <p><strong>事件冒泡和事件捕获过程图：</strong></p> <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/4/16/16a2654b0dd928ef~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p> <p>1-5是捕获过程，5-6是目标阶段，6-10是冒泡阶段；</p> <h2 id="_2-addeventlistener-的第三个参数"><a href="#_2-addeventlistener-的第三个参数" class="header-anchor">#</a> 2. addEventListener 的第三个参数</h2> <p>DOM2级事件”中规定的事件流同时支持了事件捕获阶段和事件冒泡阶段，而作为开发者，我们可以选择事件处理函数在哪一个阶段被调用。</p> <p>addEventListener方法用来为一个特定的元素绑定一个事件处理函数，是JavaScript中的常用方法。addEventListener有三个参数：</p> <div class="language- extra-class"><pre class="language-text"><code> element.addEventListener(event, function, useCapture)复制代码
+</code></pre></div><table><thead><tr><th>参数</th> <th>描述</th></tr></thead> <tbody><tr><td>event</td> <td>必须。字符串，指定事件名。  <strong>注意:</strong> 不要使用 &quot;on&quot; 前缀。 例如，使用 &quot;click&quot; ,而不是使用 &quot;onclick&quot;。   <strong>提示：</strong> 所有 HTML DOM 事件，可以查看我们完整的 <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.runoob.com%2Fjsref%2Fdom-obj-event.html" target="_blank" rel="noopener noreferrer">HTML DOM Event 对象参考手册<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</td></tr> <tr><td>function</td> <td>必须。指定要事件触发时执行的函数。   当事件对象会作为第一个参数传入函数。 事件对象的类型取决于特定的事件。例如， &quot;click&quot; 事件属于 MouseEvent(鼠标事件) 对象。</td></tr> <tr><td>useCapture</td> <td>可选。布尔值，指定事件是否在捕获或冒泡阶段执行。  可能值:true - 事件句柄在捕获阶段执行（即在事件捕获阶段调用处理函数）false- false- 默认。事件句柄在冒泡阶段执行（即表示在事件冒泡的阶段调用事件处理函数）</td></tr></tbody></table> <h2 id="_3-事件代理"><a href="#_3-事件代理" class="header-anchor">#</a> 3. 事件代理</h2> <p>在实际的开发当中，利用事件流的特性，我们可以使用一种叫做事件代理的方法。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;ul class=&quot;color_list&quot;&gt;        
+    &lt;li&gt;red&lt;/li&gt;        
+    &lt;li&gt;orange&lt;/li&gt;        
+    &lt;li&gt;yellow&lt;/li&gt;        
+    &lt;li&gt;green&lt;/li&gt;        
+    &lt;li&gt;blue&lt;/li&gt;        
+    &lt;li&gt;purple&lt;/li&gt;    
+&lt;/ul&gt;
+&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;复制代码
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>.color_list{            
+    display: flex;            
+    display: -webkit-flex;        
+}        
+.color_list li{            
+    width: 100px;            
+    height: 100px;            
+    list-style: none;            
+    text-align: center;            
+    line-height: 100px;        
+}
+//每个li加上对应的颜色，此处省略
+.box{            
+    width: 600px;            
+    height: 150px;            
+    background-color: #cccccc;            
+    line-height: 150px;            
+    text-align: center;        
+}
+复制代码
+</code></pre></div><p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/4/16/16a264146329fa93~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p> <p>我们想要在点击每个 li 标签时，输出li当中的颜色<code>（innerHTML）</code> 。常规做法是遍历每个 li ,然后在每个 li 上绑定一个点击事件：</p> <div class="language- extra-class"><pre class="language-text"><code>var color_list=document.querySelector(&quot;.color_list&quot;);            
+var colors=color_list.getElementsByTagName(&quot;li&quot;);            
+var box=document.querySelector(&quot;.box&quot;);            
+for(var n=0;n&lt;colors.length;n++){                
+    colors[n].addEventListener(&quot;click&quot;,function(){                    
+        console.log(this.innerHTML)                    
+        box.innerHTML=&quot;该颜色为 &quot;+this.innerHTML;                
+    })            
+}复制代码
+</code></pre></div><p>这种做法在 li 较少的时候可以使用，但如果有一万个 li ，那就会导致性能降低（少了遍历所有 li 节点的操作，性能上肯定更加优化）。</p> <p>这时就需要事件代理出场了，利用事件流的特性，我们只绑定一个事件处理函数也可以完成：</p> <div class="language- extra-class"><pre class="language-text"><code>function colorChange(e){                
+    var e=e||window.event;//兼容性的处理         
+    if(e.target.nodeName.toLowerCase()===&quot;li&quot;){                    
+        box.innerHTML=&quot;该颜色为 &quot;+e.target.innerHTML;                
+    }                            
+}            
+color_list.addEventListener(&quot;click&quot;,colorChange,false)复制代码
+</code></pre></div><p>**由于事件冒泡机制，点击了 li 后会冒泡到 ul ，此时就会触发绑定在 ul 上的点击事件，再利用 target 找到事件实际发生的元素，就可以达到预期的效果。
+**</p> <p><strong>使用事件代理的好处不仅在于将多个事件处理函数减为一个，而且对于不同的元素可以有不同的处理方法。假如上述列表元素当中添加了其他的元素节点（如：a、span等），我们不必再一次循环给每一个元素绑定事件，直接修改事件代理的事件处理函数即可。</strong>**
+**</p> <p><strong>（1）toLowerCase()</strong> 方法用于把字符串转换为小写。**语法：**stringObject.toLowerCase()</p> <p>**返回值：**一个新的字符串，在其中 stringObject 的所有大写字符全部被转换为了小写字符。</p> <p><strong>（2）nodeName</strong> 属性指定节点的节点名称。如果节点是元素节点，则 nodeName 属性返回标签名。如果节点是属性节点，则 nodeName 属性返回属性的名称。对于其他节点类型，nodeName 属性返回不同节点类型的不同名称。</p> <p><strong>所有主流浏览器均支持 nodeName 属性。</strong></p> <h3 id="冒泡还是捕获"><a href="#冒泡还是捕获" class="header-anchor">#</a> 冒泡还是捕获？</h3> <p>对于事件代理来说，在事件捕获或者事件冒泡阶段处理并没有明显的优劣之分，但是由于事件冒泡的事件流模型被所有主流的浏览器兼容，从兼容性角度来说还是建议大家使用事件冒泡模型。</p> <h3 id="ie浏览器兼容"><a href="#ie浏览器兼容" class="header-anchor">#</a> IE浏览器兼容</h3> <p>IE浏览器对addEventListener兼容性并不算太好，只有IE9以上可以使用。</p> <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/4/16/16a2645694fc3e3c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p> <p>要兼容旧版本的IE浏览器，可以使用IE的attachEvent函数</p> <blockquote><p>object.attachEvent(event, function)</p></blockquote> <p>两个参数与addEventListener相似，分别是事件和处理函数，默认是事件冒泡阶段调用处理函数，要注意的是，写事件名时候要加上&quot;on&quot;前缀（&quot;onload&quot;、&quot;onclick&quot;等）。</p> <h3 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="header-anchor">#</a> 阻止事件冒泡</h3> <p><strong>1. 给子级加 event.stopPropagation( )</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$(&quot;#div1&quot;).mousedown(function(e){
+    var e=event||window.event;
+    event.stopPropagation();
+});复制代码
+</code></pre></div><p><strong>2. 在事件处理函数中返回 false</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$(&quot;#div1&quot;).mousedown(function(event){
+    var e=e||window.event;
+    return false;
+});复制代码
+</code></pre></div><p>但是这两种方式是有区别的。<code>return false</code> 不仅阻止了事件往上冒泡，而且阻止了事件本身(默认事件)。<code>event.stopPropagation()</code>则只阻止事件往上冒泡，不阻止事件本身。</p> <h3 id="阻止默认事件"><a href="#阻止默认事件" class="header-anchor">#</a> 阻止默认事件</h3> <p>（1）event.preventDefault( )</p> <p>（2）return false</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/base/code/18.html" class="prev">
+        url参数匹配
+      </a></span> <span class="next"><a href="/base/code/20.html">
+        Retina 屏 1px 像素问题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f82c207c.js" defer></script><script src="/assets/js/2.93809ff7.js" defer></script><script src="/assets/js/29.3a991ca2.js" defer></script>
+  </body>
+</html>
