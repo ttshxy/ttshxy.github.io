@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: 欢迎光临胡潇遥的个人网站1
+heroText: 欢迎光临胡潇遥的个人网站
 tagline: 一起学习，每天进步一点点！
 actionText: 浏览文章 →
 actionLink: /base/

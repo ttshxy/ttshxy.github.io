@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const query = (name) => {
+        const search = location.search;
+        const data = new URLSearchParams(search);
+        return data.get(name);
+      };
+      console.log(query('d'))
+
+      // 将url参数解析为对象
+      function queryToObj() {
+        const res = {};
+        // search返回的结果为？a=10&b=20&c=30
+        // 过滤?
+        const search = location.search.substr(1);
+        // 根据&截取
+        search.split('&').forEach(paramStr => {
+          const arr = paramStr.split('=');
+          const key = arr[0];
+          const val = arr[1];
+          res[key] = val;
+        })
+        return res;
+      }
+
+      // 将url参数解析为对象
+      function queryToObj2() {
+        const res = {};
+        // search返回的结果为？a=10&b=20&c=30
+        const search = location.search;
+        const data = new URLSearchParams(search);
+        data.forEach((value,key) => {
+          res[key] = value
+        })
+        return res;
+      }
+      console.log(queryToObj2(),'2')
+    </script>
+  </head>
+  <body></body>
+</html>

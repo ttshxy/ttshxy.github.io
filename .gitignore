@@ -2,13 +2,13 @@
 
 # dependencies
 /node_modules
+demo/webpack-demo/node_modules
 /npm-debug.log*
 /yarn-error.log
 /yarn.lock
 /package-lock.json
 
 # production
-
 
 # misc
 .DS_Store
