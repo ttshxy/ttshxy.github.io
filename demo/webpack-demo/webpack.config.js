@@ -1,10 +1,32 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 module.exports = {
-  mode: 'production',
+  //mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
+  //开发环境推荐：
+  //cheap-module-eval-source-map
+  //生产环境推荐：
+  //cheap-module-source-map （这也是下版本 webpack 使用-d命令启动 debug 模式时的默认选项）
+  //devtool: 'hidden-source-map',
+  devServer: {
+    //contentBase: './dist',
+    open: true,
+    port: 8000,
+  },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
       {
         test: /\.(png|jpg|jpeg|gif)$/,
         use: {
@@ -53,4 +75,8 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  plugins: [
+    new HtmlWebpackPlugin({ template: 'index.html' }),
+    new CleanWebpackPlugin(),
+  ],
 };
