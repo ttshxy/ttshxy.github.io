@@ -58,6 +58,7 @@ module.exports = {
             ['code/23', 'js进制转换'],
             ['code/24', 'js字符串 数组方法整理'],
             ['code/25', 'js obj与Map的区别'],
+            ['code/26', 'async defer的区别'],
           ],
         },
         {
