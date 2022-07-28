@@ -11,8 +11,7 @@ module.exports = {
         text: '基础知识',
         link: '/base/',
       },
-      { text: '数据结构与算法', link: '/algorithms/' },
-      { text: 'leetcode', link: '/leetcode/' },
+      { text: '数据结构与算法', link: '/leetcode/' },
       {
         text: 'Github',
         link: 'https://github.com/ttshxy/ttshxy.github.io/tree/master',
@@ -56,6 +55,9 @@ module.exports = {
             ['code/20', 'Retina 屏 1px 像素问题'],
             ['code/21', '前端安全-XSS和CSRF'],
             ['code/22', 'js变量提升'],
+            ['code/23', 'js进制转换'],
+            ['code/24', 'js字符串 数组方法整理'],
+            ['code/25', 'js obj与Map的区别'],
           ],
         },
         {
@@ -79,28 +81,6 @@ module.exports = {
             ['react/05', 'react hooks遇到的坑'],
           ],
         },
-        // {
-        //   name: 'react',
-        //   collabsable: true,
-        //   title: 'react',
-        //   children: [
-        //     ['react/', '目录'],
-        //     ['react/$$typeof.md', 'React 中 $$typeof 的作用'],
-        //     ['react/key.md', 'React key的作用以及使用方式'],
-        //     ['react/context.md', 'React Context使用'],
-        //     ['react/portals.md', 'React Portals使用'],
-        //     ['react/lazy.md', 'React代码分割/React.lazy使用'],
-        //     [
-        //       'react/01.md',
-        //       'React Hooks 为啥 useState 返回的是 array 而不是 object 呢？',
-        //     ],
-        //     ['react/ErrorBoundary.md', 'react ErrorBoundary使用'],
-        //     ['react/02.md', '为什么不能在表达式里面定义 react hooks'],
-        //     ['react/03.md', 'react useEffect与useLayoutEffect的区别'],
-        //     ['react/04.md', 'react hooks闭包问题'],
-        //     ['react/05.md', 'react hooks遇到的坑'],
-        //   ],
-        // },
         {
           name: 'css',
           collabsable: true,
@@ -114,6 +94,9 @@ module.exports = {
               '介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同',
             ],
             ['css/04', 'css box-shadow属性'],
+            ['css/05', 'css BFC IFC'],
+            ['css/06', 'z-index属性在什么情况下会失效？'],
+            ['css/07', 'flex注意事项'],
           ],
         },
         {
@@ -144,13 +127,16 @@ module.exports = {
           ],
         },
       ],
-      '/lc/': [
+      '/leetcode/': [
         ['', '目录'],
         {
           name: 'jzoffer',
           collabsable: true,
           title: 'jzoffer',
           children: [
+            ['01', '最大公约数与最小公倍数'],
+            ['全排列', '全排列'],
+            ['02', '二分查找'],
             ['offer09', '09. 用两个栈实现队列'],
             ['offer30', '30. 包含min函数的栈'],
             ['offer06', '06. 从尾到头打印链表'],
