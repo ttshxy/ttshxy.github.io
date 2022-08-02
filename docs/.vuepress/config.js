@@ -31,6 +31,7 @@ module.exports = {
           title: 'js',
           children: [
             ['code/', '目录'],
+            ['code/0', 'js var let const的区别'],
             ['code/debounce', '什么是防抖，应用场景有哪些⭐️'],
             ['code/throttle', '什么是节流，应用场景有哪些⭐️'],
             ['code/01', 'js中为何 0.1+0.2 不等于 0.3，应如何做相等比较'],
@@ -57,8 +58,16 @@ module.exports = {
             ['code/22', 'js变量提升'],
             ['code/23', 'js进制转换'],
             ['code/24', 'js字符串 数组方法整理'],
-            ['code/25', 'js obj与Map的区别'],
+            [
+              'code/25',
+              'js obj与Map的区别 / 介绍下 Set、Map、WeakSet 和 WeakMap 的区别？',
+            ],
             ['code/26', 'async defer的区别'],
+            [
+              'code/27',
+              'instanceof作用，手动实现function isInstanceOf (child, Parent)',
+            ],
+            ['code/28', 'js手写发布订阅'],
           ],
         },
         {
@@ -125,6 +134,7 @@ module.exports = {
           children: [
             ['sundry/', '目录'],
             ['sundry/01', 'git flow流程'],
+            ['sundry/正则表达式', '正则表达式'],
           ],
         },
       ],
