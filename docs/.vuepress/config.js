@@ -68,6 +68,8 @@ module.exports = {
               'instanceof作用，手动实现function isInstanceOf (child, Parent)',
             ],
             ['code/28', 'js手写发布订阅'],
+            ['code/29', 'js call/apply/bind的区别，手写bind函数'],
+            ['code/30', 'js new操作符干了什么，手写new函数'],
           ],
         },
         {
