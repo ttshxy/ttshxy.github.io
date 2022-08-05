@@ -120,6 +120,11 @@ module.exports = {
           children: [
             ['webpack/', '目录'],
             ['webpack/01', 'vite和webpack的区别'],
+            ['webpack/02', 'webpack常用loader'],
+            ['webpack/03', 'webpack常用plugin'],
+            ['webpack/04', 'webpack的热更新是如何做到的？原理是什么？'],
+            ['webpack/05', 'webpack proxy工作原理？为什么能解决跨域?'],
+            ['webpack/06', 'Loader和Plugin的区别？编写Loader，Plugin的思路？'],
           ],
         },
         {
@@ -139,6 +144,7 @@ module.exports = {
             ['sundry/', '目录'],
             ['sundry/01', 'git flow流程'],
             ['sundry/正则表达式', '正则表达式'],
+            ['sundry/02', '个人相关'],
           ],
         },
       ],
