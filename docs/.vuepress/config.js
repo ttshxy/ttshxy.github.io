@@ -70,6 +70,7 @@ module.exports = {
             ['code/28', 'js手写发布订阅'],
             ['code/29', 'js call/apply/bind的区别，手写bind函数'],
             ['code/30', 'js new操作符干了什么，手写new函数'],
+            ['code/31', '前端性能优化总结'],
           ],
         },
         {
@@ -91,6 +92,7 @@ module.exports = {
             ['react/03', 'react useEffect与useLayoutEffect的区别'],
             ['react/04', 'react hooks闭包问题'],
             ['react/05', 'react hooks遇到的坑'],
+            ['react/06', 'react为什么要废除三个周期函数'],
           ],
         },
         {
@@ -113,6 +115,7 @@ module.exports = {
             ['css/09', 'css水平垂直居中'],
             ['css/10', 'css选择器与优先级'],
             ['css/11', 'css实现三角形'],
+            ['css/12', 'css单行截断'],
           ],
         },
         {
