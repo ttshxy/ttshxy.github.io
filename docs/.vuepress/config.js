@@ -71,6 +71,7 @@ module.exports = {
             ['code/29', 'js call/apply/bind的区别，手写bind函数'],
             ['code/30', 'js new操作符干了什么，手写new函数'],
             ['code/31', '前端性能优化总结'],
+            ['code/32', '手写Promise.all'],
           ],
         },
         {
