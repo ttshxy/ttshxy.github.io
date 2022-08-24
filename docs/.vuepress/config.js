@@ -94,6 +94,7 @@ module.exports = {
             ['react/04', 'react hooks闭包问题'],
             ['react/05', 'react hooks遇到的坑'],
             ['react/06', 'react为什么要废除三个周期函数'],
+            ['react/07', 'react 虚拟dom与diff算法'],
           ],
         },
         {
