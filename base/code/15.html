@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>requestAnimationFrame基本使用 | 胡潇遥的个人网站</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="胡潇遥的个人网站,个人网，个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a987ad.css" as="style"><link rel="preload" href="/assets/js/app.0ce129b3.js" as="script"><link rel="preload" href="/assets/js/2.0ed5c963.js" as="script"><link rel="preload" href="/assets/js/25.9ce11f5a.js" as="script"><link rel="prefetch" href="/assets/js/10.26deb145.js"><link rel="prefetch" href="/assets/js/100.a0662626.js"><link rel="prefetch" href="/assets/js/101.c63c5bc3.js"><link rel="prefetch" href="/assets/js/11.42f1c0ae.js"><link rel="prefetch" href="/assets/js/12.aabcaa60.js"><link rel="prefetch" href="/assets/js/13.0a597b43.js"><link rel="prefetch" href="/assets/js/14.524db3a6.js"><link rel="prefetch" href="/assets/js/15.1ef4ef29.js"><link rel="prefetch" href="/assets/js/16.df8d6ead.js"><link rel="prefetch" href="/assets/js/17.d04be38c.js"><link rel="prefetch" href="/assets/js/18.8ce30f0a.js"><link rel="prefetch" href="/assets/js/19.37d3216b.js"><link rel="prefetch" href="/assets/js/20.70c73166.js"><link rel="prefetch" href="/assets/js/21.801ebf35.js"><link rel="prefetch" href="/assets/js/22.419fa50e.js"><link rel="prefetch" href="/assets/js/23.8c9b467c.js"><link rel="prefetch" href="/assets/js/24.3b7b79b3.js"><link rel="prefetch" href="/assets/js/26.36b16cab.js"><link rel="prefetch" href="/assets/js/27.61e6099d.js"><link rel="prefetch" href="/assets/js/28.5139b372.js"><link rel="prefetch" href="/assets/js/29.3a991ca2.js"><link rel="prefetch" href="/assets/js/3.8c2c83ad.js"><link rel="prefetch" href="/assets/js/30.e627eaa8.js"><link rel="prefetch" href="/assets/js/31.82fffbbc.js"><link rel="prefetch" href="/assets/js/32.d6259d30.js"><link rel="prefetch" href="/assets/js/33.f576ff44.js"><link rel="prefetch" href="/assets/js/34.51fda129.js"><link rel="prefetch" href="/assets/js/35.4ed640c2.js"><link rel="prefetch" href="/assets/js/36.3d931a03.js"><link rel="prefetch" href="/assets/js/37.af40f5d2.js"><link rel="prefetch" href="/assets/js/38.cd65ff70.js"><link rel="prefetch" href="/assets/js/39.4b70f4a3.js"><link rel="prefetch" href="/assets/js/4.6ed1e919.js"><link rel="prefetch" href="/assets/js/40.d79f6a4b.js"><link rel="prefetch" href="/assets/js/41.60b61731.js"><link rel="prefetch" href="/assets/js/42.2ce121d0.js"><link rel="prefetch" href="/assets/js/43.e092cc79.js"><link rel="prefetch" href="/assets/js/44.68ffa57c.js"><link rel="prefetch" href="/assets/js/45.dda9ec76.js"><link rel="prefetch" href="/assets/js/46.820aadbf.js"><link rel="prefetch" href="/assets/js/47.ff00eb80.js"><link rel="prefetch" href="/assets/js/48.00487f37.js"><link rel="prefetch" href="/assets/js/49.ca0ecfd1.js"><link rel="prefetch" href="/assets/js/5.324bb358.js"><link rel="prefetch" href="/assets/js/50.80cf9260.js"><link rel="prefetch" href="/assets/js/51.9b5b6326.js"><link rel="prefetch" href="/assets/js/52.df1d1c0e.js"><link rel="prefetch" href="/assets/js/53.3cc7767c.js"><link rel="prefetch" href="/assets/js/54.f9ab6b52.js"><link rel="prefetch" href="/assets/js/55.885625db.js"><link rel="prefetch" href="/assets/js/56.f5f2a95a.js"><link rel="prefetch" href="/assets/js/57.ff472be3.js"><link rel="prefetch" href="/assets/js/58.3f88b641.js"><link rel="prefetch" href="/assets/js/59.5e18ffce.js"><link rel="prefetch" href="/assets/js/6.3c93203b.js"><link rel="prefetch" href="/assets/js/60.5ea22fb5.js"><link rel="prefetch" href="/assets/js/61.a72d5d75.js"><link rel="prefetch" href="/assets/js/62.79525ebe.js"><link rel="prefetch" href="/assets/js/63.252ce0f9.js"><link rel="prefetch" href="/assets/js/64.6884aa8b.js"><link rel="prefetch" href="/assets/js/65.62be79a4.js"><link rel="prefetch" href="/assets/js/66.9c2d073c.js"><link rel="prefetch" href="/assets/js/67.9762774e.js"><link rel="prefetch" href="/assets/js/68.b2240dcc.js"><link rel="prefetch" href="/assets/js/69.f732e9da.js"><link rel="prefetch" href="/assets/js/7.ce0bf00c.js"><link rel="prefetch" href="/assets/js/70.c403c4ad.js"><link rel="prefetch" href="/assets/js/71.5a5f1484.js"><link rel="prefetch" href="/assets/js/72.7990efc0.js"><link rel="prefetch" href="/assets/js/73.6bc04663.js"><link rel="prefetch" href="/assets/js/74.58dd6935.js"><link rel="prefetch" href="/assets/js/75.8a663461.js"><link rel="prefetch" href="/assets/js/76.f70d1a2c.js"><link rel="prefetch" href="/assets/js/77.a9ea7ddc.js"><link rel="prefetch" href="/assets/js/78.6a591b66.js"><link rel="prefetch" href="/assets/js/79.6ba7a480.js"><link rel="prefetch" href="/assets/js/8.a0f6d7aa.js"><link rel="prefetch" href="/assets/js/80.1025937d.js"><link rel="prefetch" href="/assets/js/81.bef469d1.js"><link rel="prefetch" href="/assets/js/82.77291444.js"><link rel="prefetch" href="/assets/js/83.c572cdff.js"><link rel="prefetch" href="/assets/js/84.bbb33dcd.js"><link rel="prefetch" href="/assets/js/85.dcf91620.js"><link rel="prefetch" href="/assets/js/86.a644f33f.js"><link rel="prefetch" href="/assets/js/87.f6f49cc3.js"><link rel="prefetch" href="/assets/js/88.8670b170.js"><link rel="prefetch" href="/assets/js/89.071b1c39.js"><link rel="prefetch" href="/assets/js/9.52db759b.js"><link rel="prefetch" href="/assets/js/90.746f5add.js"><link rel="prefetch" href="/assets/js/91.feff3414.js"><link rel="prefetch" href="/assets/js/92.ed0dd5e3.js"><link rel="prefetch" href="/assets/js/93.2cfd9171.js"><link rel="prefetch" href="/assets/js/94.7e6e62f5.js"><link rel="prefetch" href="/assets/js/95.20b2ee66.js"><link rel="prefetch" href="/assets/js/96.07920a97.js"><link rel="prefetch" href="/assets/js/97.939c2d30.js"><link rel="prefetch" href="/assets/js/98.81e2aa1f.js"><link rel="prefetch" href="/assets/js/99.5d864afe.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a987ad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">胡潇遥的个人网站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/base/" class="nav-link router-link-active">
+  基础知识
+</a></div><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="https://github.com/ttshxy/ttshxy.github.io/tree/master" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/base/" class="nav-link router-link-active">
+  基础知识
+</a></div><div class="nav-item"><a href="/leetcode/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="https://github.com/ttshxy/ttshxy.github.io/tree/master" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/base/" aria-current="page" class="sidebar-link">目录</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/base/code/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/base/code/0.html" class="sidebar-link">js var let const的区别</a></li><li><a href="/base/code/debounce.html" class="sidebar-link">什么是防抖，应用场景有哪些⭐️</a></li><li><a href="/base/code/throttle.html" class="sidebar-link">什么是节流，应用场景有哪些⭐️</a></li><li><a href="/base/code/01.html" class="sidebar-link">js中为何 0.1+0.2 不等于 0.3，应如何做相等比较</a></li><li><a href="/base/code/02.html" class="sidebar-link">Ajax/Fetch/axios三者有什么区别</a></li><li><a href="/base/code/03.html" class="sidebar-link">TCP 三次握手与四次挥手</a></li><li><a href="/base/code/04.html" class="sidebar-link">for...in与for...of的区别</a></li><li><a href="/base/code/05.html" class="sidebar-link">js严格模式的特点</a></li><li><a href="/base/code/06.html" class="sidebar-link">js跨域</a></li><li><a href="/base/code/07.html" class="sidebar-link">Antd Form.Item控件嵌套</a></li><li><a href="/base/code/08.html" class="sidebar-link">js事件循环体系</a></li><li><a href="/base/code/09.html" class="sidebar-link">for与forEach哪个快</a></li><li><a href="/base/code/10.html" class="sidebar-link">js作用域与闭包</a></li><li><a href="/base/code/11.html" class="sidebar-link">js中的this</a></li><li><a href="/base/code/12.html" class="sidebar-link">js中的原型与原型链</a></li><li><a href="/base/code/13.html" class="sidebar-link">NodeJs commonJs与ES6 import区别</a></li><li><a href="/base/code/14.html" class="sidebar-link">js深拷贝与浅拷贝</a></li><li><a href="/base/code/15.html" aria-current="page" class="active sidebar-link">requestAnimationFrame使用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/base/code/16.html" class="sidebar-link">js数组去重</a></li><li><a href="/base/code/17.html" class="sidebar-link">手写js拍平函数flat</a></li><li><a href="/base/code/18.html" class="sidebar-link">url参数匹配</a></li><li><a href="/base/code/19.html" class="sidebar-link">事件捕获与冒泡</a></li><li><a href="/base/code/20.html" class="sidebar-link">Retina 屏 1px 像素问题</a></li><li><a href="/base/code/21.html" class="sidebar-link">前端安全-XSS和CSRF</a></li><li><a href="/base/code/22.html" class="sidebar-link">js变量提升</a></li><li><a href="/base/code/23.html" class="sidebar-link">js进制转换</a></li><li><a href="/base/code/24.html" class="sidebar-link">js字符串 数组方法整理</a></li><li><a href="/base/code/25.html" class="sidebar-link">js obj与Map的区别 / 介绍下 Set、Map、WeakSet 和 WeakMap 的区别？</a></li><li><a href="/base/code/26.html" class="sidebar-link">async defer的区别</a></li><li><a href="/base/code/27.html" class="sidebar-link">instanceof作用，手动实现function isInstanceOf (child, Parent)</a></li><li><a href="/base/code/28.html" class="sidebar-link">js手写发布订阅</a></li><li><a href="/base/code/29.html" class="sidebar-link">js call/apply/bind的区别，手写bind函数</a></li><li><a href="/base/code/30.html" class="sidebar-link">js new操作符干了什么，手写new函数</a></li><li><a href="/base/code/31.html" class="sidebar-link">前端性能优化总结</a></li><li><a href="/base/code/32.html" class="sidebar-link">手写Promise.all</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>杂项</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="requestanimationframe基本使用"><a href="#requestanimationframe基本使用" class="header-anchor">#</a> requestAnimationFrame基本使用</h1> <h3 id="你需要知道的requestanimationframe"><a href="#你需要知道的requestanimationframe" class="header-anchor">#</a> 你需要知道的requestAnimationFrame</h3> <p>随着前端的发展，css已经能够实现非常多的动画特效，但是仍然存在css无法完成的动画任务（比如页面滚动），通常的解决方案都是使用js中的setInterval来设置定时器来实现动画特效，比如下面的一个基本的动画循环。</p> <div class="language- extra-class"><pre class="language-text"><code>(function() {
+  function updateAnimations() {
+    doAnimation1();
+    doAnimation2();
+  }
+  setInterval(updateAnimations, 100);
+})();
+</code></pre></div><p>该代码实现的功能是每隔100毫秒执行函数操作来达到动画效果，然而，使用计时器真的可靠吗？ 答案当然是 <strong>no</strong></p> <p>由于JavaScript是单线程的，所以定时器的实现是在当前任务队列完成后再执行定时器的回调的，假如当前队列任务执行时间大于定时器设置的延迟时间，那么定时器就不是那么可靠了，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>let startTime = new Date().getTime();
+setTimeout(()=&gt;{
+  let endTime = new Date().getTime();
+  console.log(endTime - startTime);
+},50)
+
+for(let i=0;i&lt;20000;i++) {
+  console.log(1);
+}
+</code></pre></div><p>输出如下</p> <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/2/13/1618f7bc6acd9f5c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="示例"></p> <p>可以看到，设置了50毫秒后执行，实际执行延迟时间远大于这个数值，这就会导致动画效果并不会达到想要的效果。</p> <hr> <p>动画是由浏览器按照一定的频率一帧一帧的绘制的，由css实现的动画的优势就是浏览器知道动画的开始及每一帧的循环间隔，能够在恰当的时间刷新UI，给用户一种流畅的体验，而setInterval或setTimeout实现的JavaScript动画就没有这么可靠了，因为浏览器压根就无法保证每一帧渲染的时间间隔，一般情况下，每秒平均刷新次数能够达到60帧，就能够给人流畅的体验，即每过 1000/60 毫秒渲染新一帧即可，但从上面的例子知，这一点单靠定时器是无法保证的。 为此，requestAnimationFrame应运而生，其作用就是让浏览器流畅的执行动画效果。可以将其理解为专门用来实现动画效果的api，通过这个api,可以告诉浏览器某个JavaScript代码要执行动画，浏览器收到通知后，则会运行这些代码的时候进行优化，实现流畅的效果，而不再需要开发人员烦心刷新频率的问题了。</p> <p>使用方法如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+      #box {
+        width: 100px;
+        height: 40px;
+        background-color: green;
+      }
+    &lt;/style&gt;
+    &lt;script&gt;
+      function animationWidth() {
+        var div = document.getElementById('box');
+        div.style.width = parseInt(div.clientWidth) + 1 + 'px';
+        if (parseInt(div.style.width) &lt; 200) {
+          requestAnimationFrame(animationWidth);
+        }
+      }
+      function clickFun() {
+        animationWidth();
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+    &lt;button onclick=&quot;clickFun()&quot;&gt;开始动画&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>效果如下(GIF录制的有点卡。。。实际效果请参考<a href="https://link.juejin.cn?target=https%3A%2F%2Fzhaolyang.github.io%2FblogBlogBlog%2Fjavascript%2FrequestAnimationFrame%2Fdemo.html" target="_blank" rel="noopener noreferrer">示例<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)：</p> <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/2/13/1618f7bc6acd9f5c~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="示例"></p> <p><strong>requestAnimationFrame做了一部分性能优化，比如浏览器切换Tab时动画会停止</strong></p> <p>可以看到，requestAnimationFrame接受一个动画执行函数作为参数，这个函数的作用是仅执行一帧动画的渲染，并根据条件判断是否结束，如果动画没有结束，则继续调用requestAnimationFrame并将自身作为参数传入。从示例来看，得到了效果平滑流畅的动画，这样就巧妙地避开了每一帧动画渲染的时间间隔问题。</p> <p>requestAnimationFrame的兼容性参考<a href="https://link.juejin.cn?target=https%3A%2F%2Fcaniuse.com%2F%23search%3DrequestAnimationFrame" target="_blank" rel="noopener noreferrer">caniuse<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>在高级浏览器中，开发人员不用去操心每一帧动画渲染的时间间隔问题，而针对低版本浏览器，则需要使用setTimeout来模拟requestAnimationFrame,且针对不同浏览器对requestAnimationFrame的实现，这个api的名字也略有差异，针对低版本浏览器的模拟requestAnimationFrame的写法如下(来自张鑫旭大神的博客)：</p> <div class="language- extra-class"><pre class="language-text"><code>(function() {
+    var lastTime = 0;
+    var vendors = ['webkit', 'moz'];
+    for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||    // Webkit中此取消方法的名字变了
+                                      window[vendors[x] + 'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));
+            var id = window.setTimeout(function() {
+                callback(currTime + timeToCall);
+            }, timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+    }
+    if (!window.cancelAnimationFrame) {
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+    }
+}());
+复制代码
+</code></pre></div><p>具体含义不做解释，如果遇到低版本浏览器的动画需求，你只需要把这段代码丢进去定义一个低配版requestAnimationFrame方法即可（珍爱生命，远离老浏览器啊）。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/base/code/14.html" class="prev">
+        js深拷贝与浅拷贝
+      </a></span> <span class="next"><a href="/base/code/16.html">
+        js数组去重
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0ce129b3.js" defer></script><script src="/assets/js/2.0ed5c963.js" defer></script><script src="/assets/js/25.9ce11f5a.js" defer></script>
+  </body>
+</html>
